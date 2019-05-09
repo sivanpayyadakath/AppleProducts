@@ -15,6 +15,7 @@
 		7BB03A612283CE1C0092BEFA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB03A602283CE1C0092BEFA /* Product.swift */; };
 		7BB03A632283D3FA0092BEFA /* ProductLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB03A622283D3FA0092BEFA /* ProductLine.swift */; };
 		7BB03A682283EF2D0092BEFA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB03A672283EF2D0092BEFA /* ProductTableViewCell.swift */; };
+		7BB03A6A228429760092BEFA /* ProductDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB03A69228429760092BEFA /* ProductDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7BB03A602283CE1C0092BEFA /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		7BB03A622283D3FA0092BEFA /* ProductLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLine.swift; sourceTree = "<group>"; };
 		7BB03A672283EF2D0092BEFA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		7BB03A69228429760092BEFA /* ProductDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				7BB03A4F2283CDB20092BEFA /* ProductTableViewController.swift */,
+				7BB03A69228429760092BEFA /* ProductDetailTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				7BB03A632283D3FA0092BEFA /* ProductLine.swift in Sources */,
 				7BB03A682283EF2D0092BEFA /* ProductTableViewCell.swift in Sources */,
 				7BB03A4E2283CDB20092BEFA /* AppDelegate.swift in Sources */,
+				7BB03A6A228429760092BEFA /* ProductDetailTableViewController.swift in Sources */,
 				7BB03A612283CE1C0092BEFA /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
