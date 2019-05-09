@@ -70,6 +70,22 @@ class ProductTableViewController: UITableViewController {
         productLines[sourceIndexPath.section].products.remove(at: sourceIndexPath.row)
     }
     
+    var selectedProduct: Product?
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = productLines[indexPath.section].products[indexPath.row]
+        selectedProduct = product
+        performSegue(withIdentifier: "SelectRow", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SelectRow" {
+            let tvc = segue.destination as! ProductDetailTableViewController
+            tvc.product = selectedProduct
+        }
+
+    }
+    
 }
 
 
