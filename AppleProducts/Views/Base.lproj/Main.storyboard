@@ -18,13 +18,55 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="GRh-5c-kBB">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="200" id="GRh-5c-kBB" customClass="ProductTableViewCell" customModule="AppleProducts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRh-5c-kBB" id="qpO-N9-T1u">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRh-5c-kBB" id="qpO-N9-T1u">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ga2-yY-YUf">
+                                            <rect key="frame" x="12" y="12" width="80" height="80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="80" id="AP8-5q-T4c"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="Aph-ah-KWR"/>
+                                                <constraint firstAttribute="width" constant="80" id="jF1-GT-QBk"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="otl-vH-6tu"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-B9-HMX">
+                                            <rect key="frame" x="104" y="30" width="298" height="35"/>
+                                            <fontDescription key="fontDescription" name="KohinoorBangla-Semibold" family="Kohinoor Bangla" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUO-ut-iom">
+                                            <rect key="frame" x="104" y="65.5" width="298" height="102"/>
+                                            <string key="text">this is a test paragraph.just writing random sentences.here im witht the tableviews.home sweet home.I am testing whether a hugging priority or a compression priority is needed. what do you think?</string>
+                                            <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ga2-yY-YUf" firstAttribute="leading" secondItem="qpO-N9-T1u" secondAttribute="leading" constant="12" id="2OV-kD-IAy"/>
+                                        <constraint firstItem="ZUO-ut-iom" firstAttribute="leading" secondItem="ga2-yY-YUf" secondAttribute="trailing" constant="12" id="BjZ-wy-HeC"/>
+                                        <constraint firstAttribute="bottom" secondItem="ZUO-ut-iom" secondAttribute="bottom" constant="32" id="Dq3-i8-nF3"/>
+                                        <constraint firstItem="bfQ-B9-HMX" firstAttribute="top" secondItem="qpO-N9-T1u" secondAttribute="top" constant="30" id="F1N-0b-3qV"/>
+                                        <constraint firstItem="bfQ-B9-HMX" firstAttribute="leading" secondItem="ga2-yY-YUf" secondAttribute="trailing" constant="12" id="Gnt-Zx-JO9"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZUO-ut-iom" secondAttribute="trailing" constant="12" id="PTD-3S-Wed"/>
+                                        <constraint firstItem="ZUO-ut-iom" firstAttribute="top" secondItem="bfQ-B9-HMX" secondAttribute="bottom" constant="0.5" id="bJf-Ub-lQ1"/>
+                                        <constraint firstItem="ga2-yY-YUf" firstAttribute="top" secondItem="qpO-N9-T1u" secondAttribute="top" constant="12" id="o7J-uX-3Nw"/>
+                                        <constraint firstAttribute="trailing" secondItem="bfQ-B9-HMX" secondAttribute="trailing" constant="12" id="oWf-hV-HsN"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZUO-ut-iom" secondAttribute="trailing" constant="12" id="t3U-uw-pne"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <inset key="separatorInset" minX="104" minY="0.0" maxX="12" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="productDescriptionLabel" destination="ZUO-ut-iom" id="Rbn-WB-Ly2"/>
+                                    <outlet property="productImageView" destination="ga2-yY-YUf" id="5LT-hk-SWd"/>
+                                    <outlet property="productTitleLabel" destination="bfQ-B9-HMX" id="dI3-g8-cSF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
